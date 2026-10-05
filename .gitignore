@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+data/
+demo-data/
+test-results/
+*.log
+build/
+dist/
+
+# Private runtime history and model caches
+.env
+.env.*
+*.sqlite3*
+*.faiss
+*.lock
+screenshots/
+models/
+.chart-data*/
+.seen*/

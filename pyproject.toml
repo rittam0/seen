@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seen-local"
+version = "0.1.0"
+description = "A private, searchable visual history of your Windows desktop"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn>=0.30,<1", "pillow>=11,<13",
+  "mss>=10,<11", "psutil>=6,<8", "numpy>=2,<3", "fastembed>=0.7,<0.9",
+  "faiss-cpu>=1.10,<2", "pytesseract>=0.3.13,<0.4", "filelock>=3.16,<4",
+  "winrt-runtime>=3,<4; sys_platform == 'win32'",
+  "winrt-Windows.Foundation>=3,<4; sys_platform == 'win32'",
+  "winrt-Windows.Foundation.Collections>=3,<4; sys_platform == 'win32'",
+  "winrt-Windows.Media.Ocr>=3,<4; sys_platform == 'win32'",
+  "winrt-Windows.Graphics.Imaging>=3,<4; sys_platform == 'win32'",
+  "winrt-Windows.Storage.Streams>=3,<4; sys_platform == 'win32'",
+  "winrt-Windows.Globalization>=3,<4; sys_platform == 'win32'"
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "httpx>=0.28,<1"]
+
+[project.scripts]
+seen = "seen.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["seen*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+seen = ["static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

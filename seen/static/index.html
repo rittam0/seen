@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Seen — Find your moments</title><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script></head>
+<body>
+<aside>
+  <a class="brand" href="/" aria-label="Seen home"><span class="logo">◉</span> Seen<span class="beta">LOCAL</span></a>
+  <div class="space-label">YOUR MEMORY, AT HAND</div>
+  <nav><button class="nav active" id="search-nav"><span>⌕</span> Search memories</button><button class="nav" id="history-nav"><span>◷</span> Timeline</button><button class="nav" id="settings-nav"><span>⚙</span> Capture settings</button></nav>
+  <div class="aside-note"><span class="little-eye">◉</span><h3>A little less forgotten.</h3><p>The things you see, ready<br>when you need them again.</p></div>
+  <div class="privacy"><span>▣</span><div><strong>Only on this computer</strong><small>Your memories stay yours.</small></div></div>
+</aside>
+<main>
+  <header><div class="breadcrumb">Your workspace <span>/</span> <b id="page-name">Search</b></div><button id="capture-toggle" class="capture-pill"><i></i><span>Capture paused</span></button></header>
+  <section class="hero"><div class="eyebrow">A SECOND LOOK, WHENEVER YOU NEED IT</div><h1>Find something you<br><em>remember seeing.</em></h1><p>You don’t need the right bookmark. Just a little recollection.</p>
+  <form id="search-form"><div class="search-wrap"><span class="search-icon">⌕</span><input id="query" aria-label="What do you remember?" placeholder="What do you remember?" autocomplete="off" maxlength="1000"><button type="submit" aria-label="Search memories">Search <span>↗</span></button></div></form>
+  <div class="suggestions"><span>Try a memory</span><button data-query="vector database repository">a vector database repo ↗</button><button data-query="terminal error yesterday">an error from yesterday ↗</button><button data-query="blue architecture diagram">a blue diagram ↗</button></div>
+  </section>
+  <section class="memories"><div class="section-top"><div><h2 id="results-heading">Recent moments <span id="count">0</span></h2><p id="results-caption">A few things that crossed your screen.</p></div><div class="mode-control" aria-label="Retrieval method"><button data-mode="hybrid" class="selected">Hybrid</button><button data-mode="lexical">Keyword</button><button data-mode="dense">Semantic</button></div></div>
+  <div id="notice" role="status" hidden></div><div id="results" class="grid" aria-live="polite"></div><button id="load-more" class="secondary" hidden>Load more moments</button>
+  </section>
+  <footer><span><i class="green-dot"></i> LOCAL BY DESIGN</span><span id="storage-status">Your visual history, on your terms.</span></footer>
+</main>
+<dialog id="detail"><div class="dialog-head"><span class="eyebrow">A MOMENT, REMEMBERED</span><button class="close" aria-label="Close moment">×</button></div><h2 id="detail-title"></h2><p id="detail-meta"></p><a id="full-image" target="_blank" rel="noopener"><img id="detail-image" alt="Full captured window"></a><div class="detail-bottom"><h3>Extracted text</h3><p id="detail-ocr"></p><pre id="detail-text"></pre></div></dialog>
+<dialog id="settings"><div class="dialog-head"><h2>Capture settings</h2><button class="close" aria-label="Close settings">×</button></div><p>Build your memory at your own pace. Screenshots and text are stored only on this computer.</p><div class="setting-row"><div><h3>Desktop capture</h3><p id="worker-status">Checking capture worker…</p></div><button id="settings-toggle" class="secondary">Resume</button></div><form id="exclusions-form"><label for="exclusions">Excluded applications</label><p class="hint">One executable name per line. Seen always skips its own window.</p><textarea id="exclusions" rows="5" placeholder="1password.exe"></textarea><button class="primary" type="submit">Save exclusions</button><span id="settings-saved" role="status"></span></form><div class="danger-zone"><h3>Clear your history</h3><p>Delete every screenshot, extracted text, and search vector. Capture will pause.</p><button id="delete-history" class="danger">Delete all history</button></div></dialog>
+</body></html>

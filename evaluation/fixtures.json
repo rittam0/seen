@@ -1,0 +1,146 @@
+[
+  {
+    "id": "moment-01",
+    "title": "PostgreSQL backup guide",
+    "text": "Use pg_dump for nightly database backups. Restore archives with pg_restore and verify the row counts after recovery.",
+    "query": "recover the database from last night backup"
+  },
+  {
+    "id": "moment-02",
+    "title": "Docker service failure",
+    "text": "The payments container cannot reach PostgreSQL on port 5432. Inspect the compose network and DATABASE_URL connection string.",
+    "query": "container database connection refused"
+  },
+  {
+    "id": "moment-03",
+    "title": "Python memory investigation",
+    "text": "tracemalloc snapshots compare allocations between requests. A growing list of cached response bodies caused the memory leak.",
+    "query": "python growing memory cached responses"
+  },
+  {
+    "id": "moment-04",
+    "title": "React accessibility checklist",
+    "text": "Use keyboard focus indicators and accessible button names. Dialogs must trap focus and return it when dismissed.",
+    "query": "keyboard navigation modal focus"
+  },
+  {
+    "id": "moment-05",
+    "title": "Optical signal monitoring",
+    "text": "Laser current and optical power identify soft failures. OSNR and bit error rate describe the quality of an optical lightpath.",
+    "query": "fiber network laser degradation measurements"
+  },
+  {
+    "id": "moment-06",
+    "title": "Worker retry design",
+    "text": "A transactional outbox commits an approved job with its audit log. Workers use leases, exponential backoff and a dead letter queue.",
+    "query": "approved job retries after abandoned worker"
+  },
+  {
+    "id": "moment-07",
+    "title": "Satellite propagation notes",
+    "text": "Two line element records describe satellites. SGP4 computes a current position from the orbital elements and timestamp.",
+    "query": "calculate satellite position from orbital records"
+  },
+  {
+    "id": "moment-08",
+    "title": "Network DNS snapshot",
+    "text": "DNS lookups time out while TCP handshakes succeed. A bounded network snapshot records symptoms without assigning blame to the ISP.",
+    "query": "dns lookup failures working tcp"
+  },
+  {
+    "id": "moment-09",
+    "title": "Inventory reconciliation",
+    "text": "Compare physical inventory with SAP book stock. Investigate negative variances using goods issue records and production consumption.",
+    "query": "warehouse stock discrepancy sap"
+  },
+  {
+    "id": "moment-10",
+    "title": "Paint oven troubleshooting",
+    "text": "Underbake occurs when metal temperature stays below the required cure window. Record the oven temperature profile before changing line speed.",
+    "query": "paint curing low temperature oven"
+  },
+  {
+    "id": "moment-11",
+    "title": "Travel planning Kyoto",
+    "text": "Take the train to Kyoto station and visit the bamboo grove early. Reserve museum tickets and leave time for a rainy afternoon.",
+    "query": "kyoto train bamboo museum itinerary"
+  },
+  {
+    "id": "moment-12",
+    "title": "Recipe for lentil soup",
+    "text": "Simmer red lentils with carrots, cumin and vegetable stock. Add lemon juice after cooking for a bright finish.",
+    "query": "lentils carrots cumin lemon cooking"
+  },
+  {
+    "id": "moment-13",
+    "title": "Guitar practice log",
+    "text": "Practice alternate picking slowly with a metronome. Increase tempo only after every note sounds clean.",
+    "query": "music alternate picking metronome practice"
+  },
+  {
+    "id": "moment-14",
+    "title": "Budget spreadsheet review",
+    "text": "Track monthly rent, groceries and electricity bills. Move the remaining income into an emergency savings fund.",
+    "query": "monthly household costs savings budget"
+  },
+  {
+    "id": "moment-15",
+    "title": "Chess endgame study",
+    "text": "Opposition matters in king and pawn endings. Keep the rook behind a passed pawn and activate the king.",
+    "query": "chess rook pawn ending opposition"
+  },
+  {
+    "id": "moment-16",
+    "title": "Photograph exposure guide",
+    "text": "A fast shutter freezes moving subjects. Aperture controls depth of field, while high ISO adds noise in low light.",
+    "query": "camera low light shutter aperture settings"
+  },
+  {
+    "id": "moment-17",
+    "title": "Linux disk investigation",
+    "text": "The filesystem is full because journal logs accumulated. Inspect disk usage with du and rotate logs before deleting unrelated files.",
+    "query": "linux full disk journal log rotation"
+  },
+  {
+    "id": "moment-18",
+    "title": "TLS certificate renewal",
+    "text": "The HTTPS certificate expires on Friday. Renew it and verify the chain, hostname and expiry from the client.",
+    "query": "https expired certificate renewal chain"
+  },
+  {
+    "id": "moment-19",
+    "title": "Git conflict resolution",
+    "text": "A merge conflict changed the same function on two branches. Compare both versions, keep intended behavior and run the tests.",
+    "query": "git branches merge conflicting function"
+  },
+  {
+    "id": "moment-20",
+    "title": "Search ranking evaluation",
+    "text": "Recall at five counts targets among the first five results. Mean reciprocal rank rewards earlier correct matches.",
+    "query": "measure retrieval target ranking recall mrr"
+  },
+  {
+    "id": "moment-21",
+    "title": "SQLite concurrency note",
+    "text": "Write ahead logging allows readers during a write transaction. Configure a busy timeout and close connections promptly.",
+    "query": "sqlite wal concurrent readers database timeout"
+  },
+  {
+    "id": "moment-22",
+    "title": "Privacy capture checklist",
+    "text": "Pause screenshot recording before opening passwords. Exclude credential manager applications and keep history on local encrypted storage.",
+    "query": "stop screenshots password manager privacy"
+  },
+  {
+    "id": "moment-23",
+    "title": "Cache expiry incident",
+    "text": "A stale weather response stayed in the in-memory cache. Shorten the time to live and refresh entries after expiry.",
+    "query": "weather stale cached response expiry"
+  },
+  {
+    "id": "moment-24",
+    "title": "Test flakiness analysis",
+    "text": "Mocked HTTP requests can finish within one clock tick. Inject a deterministic clock instead of asserting elapsed wall time is positive.",
+    "query": "mock http flaky timing test deterministic clock"
+  }
+]
